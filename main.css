@@ -53,98 +53,94 @@ table {
 #profile-image, #name-headline, #about, #links{
   background-color: violet;
 }*/
-/* Poziționarea */
-
-.profile-card {
-  width: 480px;
-  max-width: calc(100vw - 10px);
+/* ==== BASE STYLES ==== */
+body{
+  font-family: Inconsolata, 'Times New Roman', serif;
 }
-/*centrare cu flexbox*/
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+h1,h2{
+  font-family: Montserrat, 'Open Sans', Arial, sans-serif;
 }
-/*centrare containere si a continutului*/
-#head, #links{
-  text-align: center;
-}
-/*setez pentru head si content o lățime de 90% pentru fiecare și le voi centra pe orizontală*/
-
-#head, #content {
-  width: 90%;
-  margin: 0 auto;
-}
-/*imaginea de profil*/
-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-}
-/*mutare container imagine de profil catre marginea de sus*/
-#profile-image {
-  margin-top: -60px;
-}
-/*Lista inline*/
-ul {
-  list-style-type: none;
-}
-
-li {
-  display: inline;
-}
-/*Adăugarea spațiilor albe*/
-#head, #about {
-  margin-bottom: 10%;
-}
-
-#content {
-  padding: 5% 10%;
-}
-/*Adăugarea unei imagini de fundal*/
-body {
-  background: url('assets/foto fundal 1.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-/*Formatarea cărții de vizită*/
-#profile-card {
-  background-color: hsla(0, 0%, 100%, .5);
-  border-radius: 4px;
-  box-shadow: hsla(0, 0%, 0%, .8) 10px 10px 80px;
-}
-/*Adăugarea marginilor*/
-img {
-  padding: 1px;
-  background-color: #666;
-  filter: grayscale(50%);
-}
-/*o linie subțire între secțiunile #head și #content*/
-#content {
-  border-top: 1px solid hsla(0, 0%, 30%, .8);
-}
-/*Schimbarea interacțiunii*/
-img:hover {
-  transform: scale(1.1);
-  transition: all 0.5s ease-in-out;
-  filter: grayscale(20%);
-}
-/* formatarea textului*/
-h1, h2{
-  font-family: 'Cormorant Garamond', 'Times New Roman';
-}
-p{
- font-family:'Open Sans Condensed', 'Sans Serif'; 
+/*Stabilește tipografia*/
+body{
+  font-size: 1.125rem;
+  height: 2rem;
 }
 h1{
- font-size:20px;
-  font-weight: 500;
+  font-size: 1.8rem;
 }
 h2{
-  font-size:18px;
+  font-size: 1.6rem;
 }
-p{
- font-size:16px; 
+#about{
+  letter-spacing: 0.125rem;
+}
+.picture{
+  width: 50%;
+  height: 50%;
+}
+* {
+	box-sizing: border-box;
+}
+/* ==== LAYOUT STYLES ==== */
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd,
+p,figure,
+pre,table,fieldset,hr,
+img,
+#head, #content {
+    margin-bottom: 1rem;
+}
+/* ==head==*/
+#head{
+  text-align: center;
+	padding: 1.25rem;
+}
+@media (min-width: 768px) {
+#head {
+			position: fixed;
+			top: 0;
+			height: 100%;
+			width: 50%;
+		}
+}
+/*==continut si legaturi ==*/
+#about, #links{
+  width: 95%;
+  text-align: center;
+	margin: 1.25rem auto;
+	padding: 0.3125rem;
+}
+#content{
+  width: 95%;
+	margin: 0 auto 1rem;
+	padding: 0.3125rem;
+}
+/*  Content Wrapper Styles */
+
+@media (min-width: 768px) {
+
+	#content {
+		float: right;
+		width: 50%;
+		max-width: 812px;
+	}
+
+}
+/* ==== COMPONENT STYLES ==== */
+.load {
+	display: block;
+	text-align: center;
+	padding: 0.625rem;
+	font-size: 1.25rem;
+	color: #8c8e9b;
+}
+a {
+	color:black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: skyblue;
 }
 
 
