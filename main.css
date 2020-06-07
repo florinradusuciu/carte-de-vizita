@@ -43,41 +43,109 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-header{
-  background-color: cyan;
+/*color help*/
+/*#profile-card{
+  background-color: hsla(60, 100%, 50%, .4);
 }
-#profil-image{
-  background-color:burlywood;
+#head, #content{
+  background-color: greenyellow;
 }
-#content{
-  background-color:chartreuse;
+#profile-image, #name-headline, #about, #links{
+  background-color: violet;
+}*/
+/* Poziționarea */
+
+.profile-card {
+  width: 480px;
+  max-width: calc(100vw - 10px);
 }
-footer{
-  background-color: antiquewhite;
+/*centrare cu flexbox*/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-/* ==== BASE STYLES ==== */
-body{
-  font-family: 'Cormorant Garamont','Times New Roman', serif;
-  font-size: 1.125rem;
-  line-height: 2rem;
+/*centrare containere si a continutului*/
+#head, #links{
+  text-align: center;
 }
-header{
-  font-size: 1.125rem;
+/*setez pentru head si content o lățime de 90% pentru fiecare și le voi centra pe orizontală*/
+
+#head, #content {
+  width: 90%;
+  margin: 0 auto;
 }
-h1,h2{
-  font-family: 'Open Sans Condensed', Arial, sans-serif;
+/*imaginea de profil*/
+img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+/*mutare container imagine de profil catre marginea de sus*/
+#profile-image {
+  margin-top: -60px;
+}
+/*Lista inline*/
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+}
+/*Adăugarea spațiilor albe*/
+#head, #about {
+  margin-bottom: 10%;
+}
+
+#content {
+  padding: 5% 10%;
+}
+/*Adăugarea unei imagini de fundal*/
+body {
+  background: url('assets/foto fundal 1.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+/*Formatarea cărții de vizită*/
+#profile-card {
+  background-color: hsla(0, 0%, 100%, .5);
+  border-radius: 4px;
+  box-shadow: hsla(0, 0%, 0%, .8) 10px 10px 80px;
+}
+/*Adăugarea marginilor*/
+img {
+  padding: 1px;
+  background-color: #666;
+  filter: grayscale(50%);
+}
+/*o linie subțire între secțiunile #head și #content*/
+#content {
+  border-top: 1px solid hsla(0, 0%, 30%, .8);
+}
+/*Schimbarea interacțiunii*/
+img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(20%);
+}
+/* formatarea textului*/
+h1, h2{
+  font-family: 'Cormorant Garamond', 'Times New Roman';
+}
+p{
+ font-family:'Open Sans Condensed', 'Sans Serif'; 
 }
 h1{
-  font-size: 1.8rem;
+ font-size:20px;
+  font-weight: 500;
 }
 h2{
-  font-size: 1.6rem;
+  font-size:18px;
 }
-*{
- letter-spacing: 0.125rem; 
+p{
+ font-size:16px; 
 }
-.image{
-  width: 100%;
-  height: auto;
-}
+
+
 
