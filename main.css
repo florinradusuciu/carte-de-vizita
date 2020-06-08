@@ -134,6 +134,10 @@ li{
   display: inline-block;
   
 }
+#profile-card{
+  background: url('assets/abraziv-alb-arta-aspect-1939485.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
 /* ==== COMPONENT STYLES ==== */
 .load {
 	display: block;
