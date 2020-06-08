@@ -126,6 +126,14 @@ img,
 	}
 
 }
+ul{
+  list-style-type: none;
+  
+}
+li{
+  display: inline-block;
+  
+}
 /* ==== COMPONENT STYLES ==== */
 .load {
 	display: block;
